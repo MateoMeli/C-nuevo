@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Clase.c
+ Name        : MemoriaDinamica.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
@@ -11,9 +11,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
-	setbuf(stdin, NULL);
 
-	printf("La concha de tu madre all boys!\n");
-	return 0;
+
+int main(void) {
+
+	setbuf(stdout, NULL);
+
+	int* a;
+	int i;
+	a = (int*) malloc(sizeof(int)*20);
+
+	if(a != NULL)
+	{
+		for(i = 0; i < 20; i ++)
+		{
+			*(a+i) = 0;
+		}
+	}
+
+	return EXIT_SUCCESS;
 }
